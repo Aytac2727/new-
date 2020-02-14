@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import "_variables";
+
+body {
+    font-family: $font-family;
+}
+
+#slider {
+    position: relative;
+    cursor: grab;
+
+    .slide-content {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        text-align: center;
+        color: $white;
+
+        h1 {
+            font-size: 72px;
+        }
+
+        p {
+            font-size: 2em;
+        }
+    }
+}
+
+#trends {
+    .trend-item{
+        height: 250px;
+        position: relative;
+        overflow: hidden;
+        &:hover {
+            .trend-img{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .trend-img{
+            img {
+                transition: .3s;
+            }
+        }
+        .trend-content{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
